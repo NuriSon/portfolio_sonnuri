@@ -120,7 +120,7 @@
                      <div class="card card-hover h-100">
                         <div class="card-body">                 
                            <a href="https://github.com/NuriSon/HouseMe" download="NuriSon_HTWBerlin_BA" target="_blank">
-                              <video class="card-img-top" src="img/houseme_edit.mp4" autoplay muted loop webkit-playsinline playsinline></video>
+                              <video id="myVideo" class="card-img-top" src="img/houseme_edit.mp4" autoplay muted loop webkit-playsinline playsinline></video>
                               <div class="reveal h-100 p-2 d-flex ">
                                  <div class="w-100 align-self-center">
                                     <p>House Me, 2024 <br> B.Sc. VR in Real Estate </p>
@@ -129,7 +129,7 @@
                            </a>
                         </div>
                      </div>
-
+                   
                      <div class="card card-hover h-100">
                         <div class="card-body">
                            <a href="index.html">
@@ -264,6 +264,15 @@
       <script>
          new WOW().init();
       </script>
+        <script>
+         document.addEventListener('DOMContentLoaded', function() {
+           var video = document.getElementById('myVideo');
+           video.play().catch(function(error) {
+             // Autoplay failed, you can handle the error here
+             console.log('Autoplay was prevented:', error);
+           });
+         });
+       </script>
       <!-- End Javascript -->
    </body>
 </html>
